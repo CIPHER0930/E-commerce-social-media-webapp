@@ -1,0 +1,66 @@
+# E-commerce-social-media-webapp
+web application that combines the features of an e-commerce platform with those of a social media platform. This allows users to shop for products and services, connect with other users, and share product reviews and recommendations
+here is the directory structure for the E-commerce-social-media-webapp :
+
+
+/index.html
+/post
+  /index.html
+  /new.html
+  /edit.html
+/upload
+  /index.html
+/notification
+  /index.html
+/buy
+  /index.html
+  /search.html
+/sell
+  /index.html
+  /search.html
+/profile
+  /index.html
+  /edit.html
+/dashboard
+  /index.html
+/message
+  /index.html
+  /new.html
+  /conversation.html
+/logout
+  /index.html
+/like
+  /index.html
+/react
+  /index.html
+/love
+  /index.html
+/post-and-upload
+  /index.html
+/friends
+  /index.html
+/chat
+  /index.html
+/pages
+  /index.html
+/groups
+  /index.html
+/menu
+  /index.html
+/events
+  /index.html
+/sms
+  /index.html
+/phonenumber
+  /index.html
+/settings-and-privacy
+  /index.html
+/help
+  /index.html
+/terms-and-policy
+  /index.html
+/logout-and-login
+  /logout.html
+  /login.html
+/post-comments
+  /index.html
