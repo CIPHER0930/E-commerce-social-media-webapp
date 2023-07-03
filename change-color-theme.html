@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-commerce Social Media Webapp</title>
+<style>
+:root {
+  --light-text-color: black;
+  --light-bg-color: white;
+  --dark-text-color: white;
+  --dark-bg-color: black;
+}
+
+body {
+  background-color: var(--light-bg-color);
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: var(--light-bg-color);
+  padding: 10px;
+}
+
+nav a {
+  color: var(--light-text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.dark {
+  body {
+    background-color: var(--dark-bg-color);
+  }
+
+  nav {
+    background-color: var(--dark-bg-color);
+  }
+
+  nav a {
+    color: var(--dark-text-color);
+  }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<h1>E-commerce Social Media Webapp</h1>
+
+<p>This is a web application that combines the features of an e-commerce platform with those of a social media platform. This allows users to shop for products and services, connect with other users, and share product reviews and recommendations.</p>
+
+<p>To learn more about the features of this web application, please visit our <a href="#">website</a>.</p>
+
+<div class="dark">
+  <h2>Dark Theme</h2>
+  <p>Click here to switch to the dark theme.</p>
+</div>
+</body>
+</html>
