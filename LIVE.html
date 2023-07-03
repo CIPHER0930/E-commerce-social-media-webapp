@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-commerce Social Media Webapp</title>
+<style>
+body {
+  background-color: white;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: purple;
+  padding: 10px;
+}
+
+nav a {
+  color: lemon-green;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  padding: 10px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.chat-message .username {
+  font-weight: bold;
+}
+
+.chat-message .message {
+  color: black;
+}
+
+.chat-message .reaction {
+  color: gray;
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<h1>E-commerce Social Media Webapp</h1>
+
+<p>This is a web application that combines the features of an e-commerce platform with those of a social media platform. This allows users to shop for products and services, connect with other users, and share product reviews and recommendations.</p>
+
+<p>To learn more about the features of this web application, please visit our <a href="#">website</a>.</p>
+
+<div class="chat-container">
+  <ul>
+    <li class="chat-message">
+      <span class="username">Richmond</span>: This is a test message.
+    </li>
+    <li class="chat-message">
+      <span class="username">Richmond</span>: This is another test message.
+    </li>
+  </ul>
+
+  <input type="text" placeholder="Enter your message here...">
+  <button>Send</button>
+</div>
+</body>
+</html>
