@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<style>
+body {
+  background-color: white;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: purple;
+  padding: 10px;
+}
+
+nav a {
+  color: lemon-green;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.profile-card {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-data {
+  margin-top: 20px;
+}
+
+.profile-name {
+  font-size: 22px;
+}
+
+.profile-bio {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.profile-posts {
+  margin-top: 20px;
+}
+
+.profile-post {
+  margin-bottom: 10px;
+}
+
+.profile-post-title {
+  font-size: 18px;
+}
+
+.profile-post-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="profile-card">
+  <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+  <div class="profile-data">
+    <h2 class="profile-name">John Doe</h2>
+    <p class="profile-bio">Software Engineer</p>
+  </div>
+  <div class="profile-posts">
+    <h3>Recent Posts</h3>
+    <div class="profile-post">
+      <h4 class="profile-post-title">My First Post</h4>
+      <p class="profile-post-content">This is my first post on the e-commerce social media webapp. I'm excited to share my thoughts on products and services with you all.</p>
+    </div>
+    <div class="profile-post">
+      <h4 class="profile-post-title">My Favorite Product</h4>
+      <p class="profile-post-content">I just bought this amazing new product called the "E-commerce Social Media Webapp". It's the best thing since sliced bread!</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
