@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-commerce Social Media Webapp</title>
+<style>
+body {
+  background-color: white;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: purple;
+  padding: 10px;
+}
+
+nav a {
+  color: lemon-green;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.post {
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 18px;
+}
+
+.post-body {
+  font-size: 16px;
+}
+
+.post-comments {
+  margin-top: 20px;
+}
+
+.post-comment {
+  margin-bottom: 10px;
+}
+
+.post-comment-author {
+  font-weight: bold;
+}
+
+.post-comment-body {
+}
+
+.upload {
+  margin-bottom: 30px;
+}
+
+.upload-image {
+  width: 200px;
+  height: 200px;
+}
+
+.upload-caption {
+  font-size: 16px;
+}
+
+.like-button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.share-button {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.follow-button {
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.search-input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.search-button {
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<h1>E-commerce Social Media Webapp</h1>
+
+<script>
+var username = "Hyper";
+
+// Get the username from the database
+var db = firebase.database();
+var userRef = db.ref("users/" + username);
+userRef.once("value", function(snapshot) {
+  username = snapshot.val().username;
+});
+
+// Set the username in the DOM
+document.querySelector(".post-comment-author").textContent = username;
+
+// Like button
+var likeButton = document.querySelector(".like-button");
+likeButton.addEventListener("click", function() {
+  // Do something to like the post
+});
+
+// Share button
+var shareButton = document.querySelector(".share-button");
+shareButton.addEventListener("click", function() {
+  // Do something to share the post
+});
+
+// Follow button
+var followButton = document.querySelector(".follow-button");
+followButton.addEventListener("click", function() {
+  // Do something to follow the user
+});
+
+// Search input
+var searchInput = document.querySelector(".search-input");
+searchInput.addEventListener("keyup", function(event) {
+  // Do something to search for posts
+});
+
+// Search button
+var searchButton = document.querySelector(".search-button");
+searchButton.addEventListener("click", function() {
+  // Do something to search for posts
+});
+</script>
+
+<div class="profile">
+  <img src="https://example.com/profile_image.jpg" class="profile-image" alt="Profile image">
+  <h2 class="profile-name">Hyper</h2>
+  <p class="profile-bio">This is my bio.</p>
+<h3>Comments</h3>
+    <div class="post-comment">
+      <p class="post-comment-author">Hyper</p>
+      <p class="post-comment-body">This is a comment.</p>
+    </div>
+    <div class="post-comment">
+      <p class="post-comment-author">Richmond</p>
+      <p class="post-comment-body">This is another comment.</p>
+    </div>
+  </div>
+</div>
+
+<h2>Other User Profile Posts</h2>
+
+<div class="post">
+  <h2 class="post-title">This is a post from another user</h2>
+  <p class="post-body">This is the body of the post from another user.</p>
+  <div class="post-comments">
+    <h3>Comments</h3>
+    <div class="post-comment">
+      <p class="post-comment-author">Hyper</p>
+      <p class="post-comment-body">This is a comment on a post from another user.</p>
+    </div>
+  </div>
+</div>
+
+<h2>See Other Profile Uploads</h2>
+
+<div class="post">
+  <h2 class="post-title">This is an upload from another user</h2>
+  <img src="https://example.com/image.jpg" alt="This is an image uploaded by another user">
+  <p class="post-body">This is the caption for the upload.</p>
+</div>
+
+</body>
+</html>
