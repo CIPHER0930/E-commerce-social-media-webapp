@@ -1,0 +1,31 @@
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+<script>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAol_fATQ8OuBQRALAo_o7pFSE_01-_W3g",
+  authDomain: "e-commerce-social-media-webapp.firebaseapp.com",
+  projectId: "e-commerce-social-media-webapp",
+  storageBucket: "e-commerce-social-media-webapp.appspot.com",
+  messagingSenderId: "894487759666",
+  appId: "1:894487759666:web:806b8c0b904b954a4a252b",
+  measurementId: "G-18THWBJCKC"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Add an event listener to the login button
+const loginButton = document.getElementById("loginButton");
+loginButton.addEventListener("click", () => {
+  // Redirect to dashboard.html
+  window.location.href = "dashboard.html";
+});
+</script>
