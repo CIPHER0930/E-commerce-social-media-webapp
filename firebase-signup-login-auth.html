@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Firebase Authentication</title>
+</head>
+<body>
+<script type="module">
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getUsers } from "firebase/auth";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAol_fATQ8OuBQRALAo_o7pFSE_01-_W3g",
+  authDomain: "e-commerce-social-media-webapp.firebaseapp.com",
+  projectId: "e-commerce-social-media-webapp",
+  storageBucket: "e-commerce-social-media-webapp.appspot.com",
+  messagingSenderId: "894487759666",
+  appId: "1:894487759666:web:806b8c0b904b954a4a252b",
+  measurementId: "G-18THWBJCKC"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Get all users signed up for an account
+const users = await getUsers();
+
+// Redirect the user to the login page if they are not already signed in
+if (!users.length) {
+  window.location.href = "/login";
+} else {
+  // Check the login info
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // Redirect the user to the dashboard if the login info matches
+  for (const user of users) {
+    if (user.email === username && user.password === password) {
+      window.location.href = "/dashboard";
+      break;
+    }
+  }
+}
+</script>
+</body>
+</html>
