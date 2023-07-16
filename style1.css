@@ -1,0 +1,71 @@
+.bottom-right-buttons {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background-color: #9D27BD;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottom-right-buttons a {
+  text-decoration: none;
+}
+
+.logout-button {
+  background-color: #9D27BD;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.help {
+  background-color: #AB47FF;
+}
+
+.contact-travel-agency {
+  background-color: #BA68FF;
+}
+
+.notifications {
+  background-color: #C189FF;
+}
+
+.benefits {
+  background-color: #D2ABFF;
+}
+
+.live {
+  background-color: #E3CDFF;
+}
+
+.mtn-and-orange-momo-payments {
+  background-color: #F4EEFF;
+}
+
+.terms-and-privacy {
+  background-color: #FFFFFF;
+}
+
+.change-color-theme {
+  background-color: #F0E68C;
+}
+
+.chat {
+  background-color: #E0D47A;
+}
+
+.search {
+  background-color: #D0C268;
+}
+
+.menu {
+  background-color: #C0B056;
+}
+
+.sms {
+  background-color: #B09E44;
+}
