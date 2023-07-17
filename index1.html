@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-commerce Social Media Webapp</title>
+<style>
+body {
+  background-color: white;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: purple;
+  padding: 10px;
+}
+
+nav a {
+  color: lemon-green;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.searchbar {
+  width: 150px;
+  float: right;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.images {
+  float: left;
+  margin-right: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-title {
+  font-size: 18px;
+}
+
+.modal-body {
+}
+
+.modal-footer {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Products</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<img class="logo" src="logo.png" alt="Logo">
+
+<h1>E-commerce Social Media Webapp</h1>
+
+<p>This is a web application that combines the features of an e-commerce platform with those of a social media platform. This allows users to shop for products and services, connect with other users, and share product reviews and recommendations.</p>
+
+<div class="images">
+  <img src="product1.jpg" alt="Product 1">
+  <img src="product2.jpg" alt="Product 2">
+  <img src="product3.jpg" alt="Product 3">
+</div>
+
+<form class="searchbar" action="/search" method="post">
+  <input type="text" name="query" placeholder="Search...">
+  <button type="submit">Search</button>
+</form>
+
+<div class="modal" id="contact-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="modal-body">
+      <p>Please fill out the form below to contact us.</p>
+      <form action="/contact" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="close" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer>
