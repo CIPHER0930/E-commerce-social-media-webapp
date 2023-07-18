@@ -1,0 +1,37 @@
+<button onclick="firebase.auth().createUserWithEmailAndPassword(email, password)">Sign Up</button>
+
+<!--Use code with caution. Learn more
+
+This code will create a new user in Firebase when the button is clicked. The email and password parameters are the email and password of the new user.
+
+Here is the complete HTML code for a signup form with the button:
+HTML-->
+
+<form action="/signup" method="post">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <button onclick="firebase.auth().createUserWithEmailAndPassword(email, password)">Sign Up</button>
+</form>
+
+<!--Use code with caution. Learn more
+
+You can also use the same code for a forgot password form or a login form. Just change the firebase.auth().createUserWithEmailAndPassword() function to the appropriate function for the form.
+
+Here is the code for a forgot password form:
+HTML-->
+
+<form action="/forgot-password" method="post">
+  <input type="email" name="email" placeholder="Email">
+  <button onclick="firebase.auth().sendPasswordResetEmail(email)">Reset Password</button>
+</form>
+
+<!--Use code with caution. Learn more
+
+And here is the code for a login form:
+HTML-->
+
+<form action="/login" method="post">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <button onclick="firebase.auth().signInWithEmailAndPassword(email, password)">Login</button>
+</form>
