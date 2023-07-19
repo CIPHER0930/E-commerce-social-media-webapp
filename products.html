@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-commerce Social Media Webapp</title>
+<style>
+body {
+  background-color: white;
+}
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: purple;
+  padding: 10px;
+}
+nav a {
+  color: lemon-green;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+}
+</style>
+</head>
+<body>
+<style>
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: purple;
+  color: lemon green;
+  text-align: center;
+  font-size: 20px;
+}
+</style>
+<div class="logo">
+<span>Richmond</span>
+<span>CFA</span>
+<nav>
+ <hr>
+  <a href="dashboard2.html">Dashboard</a>
+  </hr>
+  <hr>
+  <a href="#">Products</a>
+  </hr>
+  <hr>
+  <a href="#">Services</a>
+  </hr>
+  <hr>
+  <a href="#">About</a>
+  </hr>
+  <hr>
+  <a href="contact-travel-agency.html">Contact</a>
+  </hr>
+ 
+</nav>
+<h1>E-commerce Social Media Webapp</h1>
+
+
+<div class="profile-uploads">
+  <h2>Profile Uploads</h2>
+  <ul>
+    <li>
+      <img src="https://picsum.photos/200/200" alt="Profile upload 1">
+      <p>This is the first profile upload.</p>
+    </li>
+    <li>
+      <img src="https://picsum.photos/200/200" alt="Profile upload 2">
+      <p>This is the second profile upload.</p>
+    </li>
+    <li>
+      <img src="https://picsum.photos/200/200" alt="Profile upload 3">
+      <p>This is the third profile upload.</p>
+    </li>
+  </ul>
+</div>
+
+<div class="chart">
+  <h2>Profile Uploads by Month</h2>
+  <canvas id="chart"></canvas>
+</div>
+
+<script>
+const ctx = document.getElementById("chart").getContext("2d");
+const chart = new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+      {
+        label: "Profile Uploads",
+        data: [10, 20, 30, 40, 50, 60, 70],
+        fill: false,
+        lineTension: 0.1,
+      },
+    ],
+  },
+  options: {
+    title: {
+      text: "Profile Uploads by Month",
+      display: true,
+    },
+    tooltips: {
+      enabled: true,
+    },
+  },
+});
+</script>
+
+<div class="photo-uploads">
+  <h2>Photo Uploads</h2>
+  <ul>
+    <li>
+      <img src="https://picsum.photos/200/200" alt="Photo upload 1">
+      <p>This is the first photo upload.</p>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
