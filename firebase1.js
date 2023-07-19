@@ -1,0 +1,40 @@
+
+firebaseConfig() {
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAol_fATQ8OuBQRALAo_o7pFSE_01-_W3g",
+    authDomain: "e-commerce-social-media-webapp.firebaseapp.com",
+    projectId: "e-commerce-social-media-webapp",
+    storageBucket: "e-commerce-social-media-webapp.appspot.com",
+    messagingSenderId: "894487759666",
+    appId: "1:894487759666:web:806b8c0b904b954a4a252b",
+    measurementId: "G-18THWBJCKC"
+  };
+}
+firebase.initializeApp(firebaseConfig);
+
+// Save signup data to Firebase Realtime Database
+const signupData = {
+  username: 'username',
+  email: 'email@example.com',
+  password: 'password',
+};
+firebase.database().ref('users').child(signupData.username).set(signupData);
+
+// Save profile image to Firebase Storage
+const profileImage = document.getElementById('profile-image');
+const profileImageUrl = await profileImage.files[0].upload('profile-images');
+firebase.database().ref('users').child(signupData.username).child('profileImageUrl').set(profileImageUrl);
+
+// Redirect the user to the dashboard page if the login is successful
+const loginButton = document.getElementById('login-button');
+loginButton.addEventListener('click', () => {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  firebase.auth().signInWithEmailAndPassword(username, password).then((user) => {
+    window.location.href = 'dashboard.html';
+  }, (error) => {
+    alert(error.message);
+  });
+});
